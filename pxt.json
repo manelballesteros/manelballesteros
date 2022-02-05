@@ -1,5 +1,5 @@
 {
-    "name": "data logger",
+    "name": "enviar",
     "description": "",
     "dependencies": {
         "core": "*",
