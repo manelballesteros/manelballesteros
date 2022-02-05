@@ -1,5 +1,5 @@
 {
-    "name": "enviar2",
+    "name": "recibir",
     "description": "",
     "dependencies": {
         "core": "*",
