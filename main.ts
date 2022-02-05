@@ -1,15 +1,11 @@
 let bruixola = 0
-let temperatura = 0
-radio.onReceivedString(function (receivedString) {
-    bruixola = bruixola
-    radio.sendValue("bruixola", bruixola)
-    basic.showString("" + (bruixola))
-    basic.pause(1000)
-    temperatura = temperatura
-    radio.sendValue("temperatura", temperatura)
-    basic.showString("" + (temperatura))
-    basic.pause(1000)
-})
 basic.forever(function () {
+    let temperatura = 0
     radio.setGroup(1)
+    bruixola = input.compassHeading()
+    bruixola = input.temperature()
+    radio.sendString("" + (bruixola))
+    basic.showString("" + (bruixola))
+    radio.sendString("" + (temperatura))
+    basic.showString("" + (temperatura))
 })
