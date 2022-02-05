@@ -1,4 +1,5 @@
 basic.forever(function () {
+    serial.redirectToUSB()
     serial.writeValue("Graus", input.temperature())
     serial.writeValue("llum", input.lightLevel())
 })
